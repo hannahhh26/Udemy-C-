@@ -13,6 +13,22 @@ namespace ClassesApp
 
         private readonly int _id;
 
+        // Backing field for write-only property
+        private string _password;
+
+        // Write only property
+        public string Password
+        {
+            set
+            {
+                _password = value;
+            }
+        }
+
+        // Read only Property
+        public int ID { get
+            {  return _id; }
+        }
         public string Name { get; set; }
         public string Address { get; set; }
         public string ContactNumber { get; set; }
