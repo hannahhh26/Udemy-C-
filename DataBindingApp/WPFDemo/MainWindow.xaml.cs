@@ -42,7 +42,8 @@ namespace WPFDemo
 
             foreach (var item in selectedItems)
             {
-                MessageBox.Show(item.GetType().ToString());
+                var person = (Person)item;
+                MessageBox.Show(person.Name);
             }
         }
     }
